@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-zinc-900 flex items-center justify-center h-screen;
+}
+.btn {
+  @apply bg-purple-700 overflow-hidden relative uppercase text-white text-lg border-2 py-3 px-7 border-white shadow-xl shadow-zinc-950 font-bold rounded-xl;
+}
+.effect {
+  @apply absolute w-24 h-24 bg-white rounded-full;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 1s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
